@@ -1,0 +1,10 @@
+/RESULTS_CHALLENGE/RESULTS_deeplabv3_Resnet_hog/RESULTS_FOLD_01/Checkpoints/
+/RESULTS_CHALLENGE/RESULTS_FCN_ResNet_hog/RESULTS_FOLD_01/Checkpoints/
+/RESULTS_CHALLENGE/RESULTS_FCN_ResNet_hog_pre_trained/RESULTS_FOLD_01/Checkpoints/
+/RESULTS_CHALLENGE/RESULTS_FCN_ResNet_hog_pre_trained/RESULTS_FOLD_02/Checkpoints/
+/RESULTS_CHALLENGE/RESULTS_FCN_ResNet_hog_pre_trained/RESULTS_FOLD_04/Checkpoints/
+/RESULTS_CHALLENGE/RESULTS_FCN_ResNet_hog_pre_trained/RESULTS_FOLD_03/Checkpoints/
+/RESULTS_CHALLENGE/RESULTS_FCN_ResNet_hog_pre_trained/RESULTS_FOLD_05/Checkpoints/
+/RESULTS_CHALLENGE/RESULTS_FCN_ResNet_hog_pre_trained/RESULTS_FOLD_06/Checkpoints/
+/Challenge_Final_Code/TransUnet/model/vit_checkpoint/
+/RESULTS_CHALLENGE/RESULTS_TransUNet_R50+ViT-B_16_hog/RESULTS_FOLD_01/Checkpoints/
