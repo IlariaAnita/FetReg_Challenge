@@ -29,8 +29,8 @@ List of Video in the Challenge Folder
 '''
 
 def training_execution(ar, model_hog, checkpoints_folder_ft, metric_folder_ft, valset):
-    learning_rate = 0.001
-    batchsize = 32
+    learning_rate = ar.learning_rate
+    batchsize = ar.batchsize
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     criterion = torch.nn.CrossEntropyLoss(ignore_index=255)
     model_hog = model_hog.to(device)
