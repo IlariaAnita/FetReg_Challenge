@@ -83,7 +83,7 @@ def generating_metrics(prediction_path, arg, data, ifold):
     return data
 
 # Box plot
-def generating_boxplot(data, saved_folder_path, Architectures_names, type):
+def generating_boxplot(data, saved_folder_path, Architectures_names, type, labels):
     fontP = FontProperties()
     fontP.set_size('xx-small')
     fig1, ax1 = plt.subplots()
@@ -91,7 +91,6 @@ def generating_boxplot(data, saved_folder_path, Architectures_names, type):
     colors = sns.color_palette("hls", len(data))
     for patch, color in zip(box['boxes'], colors):
         patch.set_facecolor(color)
-    labels = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'Z']
     k = len(Architectures_names)-1
     # print(Architectures_names, len(Architectures_names))
     # print(k)
@@ -149,8 +148,8 @@ def boxplot_fold(arg):
         final_result_path = os.path.join(result_fold_path, 'Predicted_Masks_Original_{}'.format(arg.epochs)) # prediction path
         if os.path.isdir(final_result_path):
             data_list = generating_metrics(final_result_path, arg, data_list, iresult-1)
-
-    generating_boxplot(data_list, saved_folder_path, fold_names, 'FOLDS')
+    labels = fold_names[1:]
+    generating_boxplot(data_list, saved_folder_path, fold_names, 'FOLDS', labels)
     generating_table(data_list, fold_names)
 
 
@@ -198,6 +197,6 @@ def boxplot_architectures(arg):
             # print(final_result_path)
             if os.path.isdir(final_result_path):
                 data_list = generating_metrics(final_result_path, arg, data_list, 0)
-
-    generating_boxplot(data_list, saved_folder_path, architectures_names, 'ARCHITECTURES')
+    labels = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'Z']
+    generating_boxplot(data_list, saved_folder_path, architectures_names, 'ARCHITECTURES', labels)
     generating_table(data_list, architectures_names)

@@ -12,6 +12,9 @@
       <excludeFolder url="file://$MODULE_DIR$/RESULTS_CHALLENGE/RESULTS_FCN_ResNet_hog_pre_trained/RESULTS_FOLD_06/Checkpoints" />
       <excludeFolder url="file://$MODULE_DIR$/Challenge_Final_Code/TransUnet/model/vit_checkpoint" />
       <excludeFolder url="file://$MODULE_DIR$/RESULTS_CHALLENGE/RESULTS_TransUNet_R50+ViT-B_16_hog/RESULTS_FOLD_01/Checkpoints" />
+      <excludeFolder url="file://$MODULE_DIR$/RESULTS_CHALLENGE/RESULTS_TransUNet_R50+ViT-B_16_hog_pre_trained/RESULTS_FOLD_01/Checkpoints" />
+      <excludeFolder url="file://$MODULE_DIR$/RESULTS_CHALLENGE/RESULTS_deeplabv3_Resnet_hog_pre_trained/RESULTS_FOLD_01/Checkpoints" />
+      <excludeFolder url="file://$MODULE_DIR$/Challenge_Final_Code/TransUnet/model" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
