@@ -1,0 +1,128 @@
+Pre Trained
+The fold 1 is just made
+Running the testing of fold 1
+No Running the testing of fold 2 because the training wasn't made
+No Running the testing of fold 3 because the training wasn't made
+No Running the testing of fold 4 because the training wasn't made
+No Running the testing of fold 5 because the training wasn't made
+No Running the testing of fold 6 because the training wasn't made
+ 
+Running fold 1
+Class:  0
+Evaluating Class 0 for the video 0
+Pixel accuracy of the clip is:  0.9644107818603516
+Pixel accuracy of the 0 class is:  0.8901345526351553
+The Mean intersection over union of the clip Video001 for the class 0 is:  0.8360153891610973
+Evaluating Class 0 for the video 5
+Pixel accuracy of the clip is:  0.9100843811035156
+Pixel accuracy of the 0 class is:  0.7455047934768755
+The Mean intersection over union of the clip Video002 for the class 0 is:  0.6824134905264879
+Evaluating Class 0 for the video 12
+Pixel accuracy of the clip is:  0.9577572631835938
+Pixel accuracy of the 0 class is:  0.8666488620652175
+The Mean intersection over union of the clip Video003 for the class 0 is:  0.7976975717980779
+ 
+The Fold 1 for the class 0
+Pixel accuracy of the fold is:  0.9577572631835938
+Pixel accuracy of the 0 class is:  0.8666488620652175
+The Mean intersection over union of the fold 1 for the class 0 is:  0.7976975717980779
+ 
+The Class 0
+Pixel accuracy of the class is:  0.9470869411121715
+Pixel accuracy of the 0 class is:  0.832218368323467
+The Mean intersection over union of the class 0 is:  0.7739505262011463
+Class:  1
+Evaluating Class 1 for the video 0
+Pixel accuracy of the clip is:  0.970572923359118
+Pixel accuracy of the 1 class is:  0.9009517697991658
+The Mean intersection over union of the clip Video001 for the class 1 is:  0.8482764108910306
+Evaluating Class 1 for the video 5
+Pixel accuracy of the clip is:  0.9156684875488281
+Pixel accuracy of the 1 class is:  0.7363185383677588
+The Mean intersection over union of the clip Video002 for the class 1 is:  0.678318778426079
+Evaluating Class 1 for the video 12
+Pixel accuracy of the clip is:  0.9668890380859375
+Pixel accuracy of the 1 class is:  0.8906099810218495
+The Mean intersection over union of the clip Video003 for the class 1 is:  0.809478566164026
+ 
+The Fold 1 for the class 1
+Pixel accuracy of the fold is:  0.9668890380859375
+Pixel accuracy of the 1 class is:  0.8906099810218495
+The Mean intersection over union of the fold 1 for the class 1 is:  0.809478566164026
+ 
+The Class 1
+Pixel accuracy of the class is:  0.9539285139604048
+Pixel accuracy of the 1 class is:  0.8355670902417803
+The Mean intersection over union of the class 1 is:  0.778891985266618
+Class:  2
+Evaluating Class 2 for the video 0
+Pixel accuracy of the clip is:  0.995841478046618
+Pixel accuracy of the 2 class is:  0.8374467699799895
+The Mean intersection over union of the clip Video001 for the class 2 is:  0.7573424857920097
+Evaluating Class 2 for the video 5
+Pixel accuracy of the clip is:  0.9952125549316406
+Pixel accuracy of the 2 class is:  0.8716444722934604
+The Mean intersection over union of the clip Video002 for the class 2 is:  0.7846623251256692
+Evaluating Class 2 for the video 12
+Pixel accuracy of the clip is:  0.9977238464355469
+Pixel accuracy of the 2 class is:  0.7405706532393515
+The Mean intersection over union of the clip Video003 for the class 2 is:  0.704302236759213
+ 
+The Fold 1 for the class 2
+Pixel accuracy of the fold is:  0.9977238464355469
+Pixel accuracy of the 2 class is:  0.7405706532393515
+The Mean intersection over union of the fold 1 for the class 2 is:  0.704302236759213
+ 
+The Class 2
+Pixel accuracy of the class is:  0.9961975704539906
+Pixel accuracy of the 2 class is:  0.8365172577450584
+The Mean intersection over union of the class 2 is:  0.761138150390336
+Class:  3
+Evaluating Class 3 for the video 0
+Pixel accuracy of the clip is:  0.9961580979196649
+Pixel accuracy of the 3 class is:  0.7422706289900066
+The Mean intersection over union of the clip Video001 for the class 3 is:  0.7255689161495122
+Evaluating Class 3 for the video 5
+Pixel accuracy of the clip is:  0.9967268371582031
+Pixel accuracy of the 3 class is:  0.7197838020082732
+The Mean intersection over union of the clip Video002 for the class 3 is:  0.6482093159179
+Evaluating Class 3 for the video 12
+Pixel accuracy of the clip is:  0.9908842468261718
+Pixel accuracy of the 3 class is:  0.7699595522438265
+The Mean intersection over union of the clip Video003 for the class 3 is:  0.757855092914198
+ 
+The Fold 1 for the class 3
+Pixel accuracy of the fold is:  0.9908842468261718
+Pixel accuracy of the 3 class is:  0.7699595522438265
+The Mean intersection over union of the fold 1 for the class 3 is:  0.757855092914198
+ 
+The Class 3
+Pixel accuracy of the class is:  0.9948214184154164
+Pixel accuracy of the 3 class is:  0.7561430281058712
+The Mean intersection over union of the class 3 is:  0.7338009383046588
+ 
+The Fold 1
+Pixel accuracy of the fold is:  0.9469350399030534
+Pixel accuracy of the 1 fold is:  0.7149403053845808
+The Mean intersection over union of the fold 1 is:  0.6390526812928162
+ 
+       Class  Background     Vessels        Tool       Fetus     Overall
+    Video001      0.8360      0.8483      0.7573      0.7256      0.6658
+    Video006      0.6824      0.6783      0.7847      0.6482      0.5559
+    Video016      0.7977      0.8095      0.7043      0.7579      0.6361
+   per Class      0.7740      0.7789      0.7611      0.7338
+ 
+       Class  Background     Vessels        Tool       Fetus     Overall
+       FOLD1      0.7977      0.8095      0.7043      0.7579      0.6391
+       FOLD2      0.0000      0.0000      0.0000      0.0000      0.0000
+       FOLD3      0.0000      0.0000      0.0000      0.0000      0.0000
+       FOLD4      0.0000      0.0000      0.0000      0.0000      0.0000
+       FOLD5      0.0000      0.0000      0.0000      0.0000      0.0000
+       FOLD6      0.0000      0.0000      0.0000      0.0000      0.0000
+ 
+boxplot architectures
+ 
+Intersection Over Union
+Architectures:          FRh       FRhpt         TUh         dRh       dRhpt
+        Mean      0.7163      0.7509      0.7280      0.7119      0.7324
+      Median      0.7519      0.8015      0.7715      0.7565      0.7762
