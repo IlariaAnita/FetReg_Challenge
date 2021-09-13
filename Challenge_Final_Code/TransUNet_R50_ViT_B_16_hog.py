@@ -49,7 +49,7 @@ class TransUNet_hog(nn.Module):
 
 
 def TransUNet_R50_ViT_B_16_hog(Pre_Trained, progress, n_classes):
-    vit_name = 'R50-ViT-B_16'
+    vit_name = 'R50-ViT-B_16-HOG'
     config_vit = CONFIGS_ViT_seg[vit_name]
     config_vit.n_classes = n_classes
     config_vit.n_skip = 0  # default

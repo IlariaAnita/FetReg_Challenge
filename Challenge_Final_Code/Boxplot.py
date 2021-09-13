@@ -97,12 +97,14 @@ def generating_boxplot(data, saved_folder_path, Architectures_names, type, label
     # ind = np.arange(k)
     # ax1.set_xticks(ind)
     ax1.set_xticklabels(labels[:k])
-    ax1.legend(Architectures_names[1:], loc='lower left', bbox_to_anchor=(-0.15, 0), prop=fontP)
+    # ax1.legend(Architectures_names[1:], loc='lower left', bbox_to_anchor=(-0.15, 0), prop=fontP)
     plt.title("IoU score")
     if type == 'FOLDS':
         plt.savefig(os.path.join(saved_folder_path, 'Final_Folds_Metric_IoU.png'))
     if type == 'ARCHITECTURES':
         plt.savefig(os.path.join(saved_folder_path, 'Final_Archs_Metric_IoU.png'))
+    if type == 'NEW_ARCHITECTURES':
+        plt.savefig(os.path.join(saved_folder_path, 'Final_New_Archs_Metric_IoU.png'))
 
 # Valori numerici
 def generating_table(data, Architectures_names):
@@ -164,10 +166,12 @@ def boxplot_architectures(arg):
     architectures_names = ['Architectures: ']
     for arch in result_list:
         # print(arch)
-        # RESULTS_FCN_RESNET_HOG_PRE_TRAINED
         # RESULTS_FCN_RESNET_HOG
+        # RESULTS_FCN_RESNET_HOG_PRE_TRAINED
+        # RESULTS_TransUNet_R50+ViT-B_16_hog
         # RESULTS_TransUNet_R50+ViT-B_16_hog_PRE_TRAINED
         # RESULTS_deeplabv3_Resnet_hog
+        # RESULTS_deeplabv3_Resnet_hog_PRE_TRAINED
         if arch[8:11] == 'FCN':
             name = arch[8] + arch[12] + arch[19]
             if len(arch) > 22:
@@ -200,3 +204,12 @@ def boxplot_architectures(arg):
     labels = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'Z']
     generating_boxplot(data_list, saved_folder_path, architectures_names, 'ARCHITECTURES', labels)
     generating_table(data_list, architectures_names)
+    new_data = []
+    new_architectures_names = []
+    new_architectures_names.append(architectures_names[0])
+    for x, data in enumerate(data_list):
+        if x == 1 or x == 2 or x == 5:
+            new_data.append(data)
+            new_architectures_names.append(architectures_names[x+1])
+    generating_boxplot(new_data, saved_folder_path, new_architectures_names, 'NEW_ARCHITECTURES', labels)
+    generating_table(new_data, new_architectures_names)

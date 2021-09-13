@@ -21,7 +21,7 @@ if __name__ == "__main__":
     parser.add_argument('--cross_fold_validation', help='Boolean value: True = apply CFV, False = make only one fold', required=True)
     parser.add_argument('--epochs', help='Number of epochs to train the ANN', required=True)
     parser.add_argument('--loss_name', help='Name of the loss used', required=True)
-    parser.add_argument('--learning_rate', help='Learning rate value', default=0.001, reuired=False)
+    parser.add_argument('--learning_rate', help='Learning rate value', default=0.001, required=False)
     parser.add_argument('--batchsize', help='Batchsize value', default=32, required=False)
     args = parser.parse_args()
 

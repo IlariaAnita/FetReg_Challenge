@@ -188,17 +188,17 @@ class Block(nn.Module):
         return x, weights
 
     def load_from(self, weights, n_block):
-        ROOT = 'Transformer/encoderblock_{}'.format(n_block)
+        ROOT = f"Transformer/encoderblock_{n_block}"
         with torch.no_grad():
-            query_weight = np2th(weights["Transformer/encoderblock_0/MultiHeadDotProductAttention_1/query/kernel"]).view(self.hidden_size, self.hidden_size).t()
-            key_weight = np2th(weights["Transformer/encoderblock_0/MultiHeadDotProductAttention_1/key/kernel"]).view(self.hidden_size, self.hidden_size).t()
-            value_weight = np2th(weights["Transformer/encoderblock_0/MultiHeadDotProductAttention_1/value/kernel"]).view(self.hidden_size, self.hidden_size).t()
-            out_weight = np2th(weights["Transformer/encoderblock_0/MultiHeadDotProductAttention_1/out/kernel"]).view(self.hidden_size, self.hidden_size).t()
+            query_weight = np2th(weights[pjoin(ROOT, ATTENTION_Q, "kernel")]).view(self.hidden_size, self.hidden_size).t()
+            key_weight = np2th(weights[pjoin(ROOT, ATTENTION_K, "kernel")]).view(self.hidden_size, self.hidden_size).t()
+            value_weight = np2th(weights[pjoin(ROOT, ATTENTION_V, "kernel")]).view(self.hidden_size, self.hidden_size).t()
+            out_weight = np2th(weights[pjoin(ROOT, ATTENTION_OUT, "kernel")]).view(self.hidden_size, self.hidden_size).t()
 
-            query_bias = np2th(weights["Transformer/encoderblock_0/MultiHeadDotProductAttention_1/query/bias"]).view(-1)
-            key_bias = np2th(weights["Transformer/encoderblock_0/MultiHeadDotProductAttention_1/key/bias"]).view(-1)
-            value_bias = np2th(weights["Transformer/encoderblock_0/MultiHeadDotProductAttention_1/value/bias"]).view(-1)
-            out_bias = np2th(weights["Transformer/encoderblock_0/MultiHeadDotProductAttention_1/out/bias"]).view(-1)
+            query_bias = np2th(weights[pjoin(ROOT, ATTENTION_Q, "bias")]).view(-1)
+            key_bias = np2th(weights[pjoin(ROOT, ATTENTION_K, "bias")]).view(-1)
+            value_bias = np2th(weights[pjoin(ROOT, ATTENTION_V, "bias")]).view(-1)
+            out_bias = np2th(weights[pjoin(ROOT, ATTENTION_OUT, "bias")]).view(-1)
 
             self.attn.query.weight.copy_(query_weight)
             self.attn.key.weight.copy_(key_weight)
@@ -209,20 +209,20 @@ class Block(nn.Module):
             self.attn.value.bias.copy_(value_bias)
             self.attn.out.bias.copy_(out_bias)
 
-            mlp_weight_0 = np2th(weights["Transformer/encoderblock_0/MlpBlock_3/Dense_0/kernel"]).t()
-            mlp_weight_1 = np2th(weights["Transformer/encoderblock_0/MlpBlock_3/Dense_1/kernel"]).t()
-            mlp_bias_0 = np2th(weights["Transformer/encoderblock_0/MlpBlock_3/Dense_0/bias"]).t()
-            mlp_bias_1 = np2th(weights["Transformer/encoderblock_0/MlpBlock_3/Dense_1/bias"]).t()
+            mlp_weight_0 = np2th(weights[pjoin(ROOT, FC_0, "kernel")]).t()
+            mlp_weight_1 = np2th(weights[pjoin(ROOT, FC_1, "kernel")]).t()
+            mlp_bias_0 = np2th(weights[pjoin(ROOT, FC_0, "bias")]).t()
+            mlp_bias_1 = np2th(weights[pjoin(ROOT, FC_1, "bias")]).t()
 
             self.ffn.fc1.weight.copy_(mlp_weight_0)
             self.ffn.fc2.weight.copy_(mlp_weight_1)
             self.ffn.fc1.bias.copy_(mlp_bias_0)
             self.ffn.fc2.bias.copy_(mlp_bias_1)
 
-            self.attention_norm.weight.copy_(np2th(weights["Transformer/encoderblock_0/LayerNorm_0/scale"]))
-            self.attention_norm.bias.copy_(np2th(weights["Transformer/encoderblock_0/LayerNorm_0/bias"]))
-            self.ffn_norm.weight.copy_(np2th(weights["Transformer/encoderblock_0/LayerNorm_2/scale"]))
-            self.ffn_norm.bias.copy_(np2th(weights["Transformer/encoderblock_0/LayerNorm_2/bias"]))
+            self.attention_norm.weight.copy_(np2th(weights[pjoin(ROOT, ATTENTION_NORM, "scale")]))
+            self.attention_norm.bias.copy_(np2th(weights[pjoin(ROOT, ATTENTION_NORM, "bias")]))
+            self.ffn_norm.weight.copy_(np2th(weights[pjoin(ROOT, MLP_NORM, "scale")]))
+            self.ffn_norm.bias.copy_(np2th(weights[pjoin(ROOT, MLP_NORM, "bias")]))
 
 
 class Encoder(nn.Module):
@@ -447,6 +447,7 @@ CONFIGS = {
     'ViT-L_32': configs.get_l32_config(),
     'ViT-H_14': configs.get_h14_config(),
     'R50-ViT-B_16': configs.get_r50_b16_config(),
+    'R50-ViT-B_16-HOG': configs.get_r50_b16_config(hog=True),
     'R50-ViT-L_16': configs.get_r50_l16_config(),
     'testing': configs.get_testing(),
 }
