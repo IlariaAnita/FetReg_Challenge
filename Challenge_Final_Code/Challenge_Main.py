@@ -1,6 +1,6 @@
-import Training_pre_trained
-import Training
-import Testing
+# import Training_pre_trained
+# import Training
+# import Testing
 import Evaluation_Segmentation_Final
 import Boxplot
 # from Challenge_Final_Code import Training
@@ -26,13 +26,13 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
 
-    if args.pre_trained == 'True':
-        print('Pre Trained')
-        model_hog = Training_pre_trained.training(args)
-    else:
-        print('No Pre Trained')
-        model_hog = Training.training(args)
-    Testing.testing(args, model_hog)
+    # if args.pre_trained == 'True':
+    #     print('Pre Trained')
+    #     model_hog = Training_pre_trained.training(args)
+    # else:
+    #     print('No Pre Trained')
+    #     model_hog = Training.training(args)
+    # Testing.testing(args, model_hog)
     Evaluation_Segmentation_Final.evaluation_segmentation(args)
     if args.cross_fold_validation == 'True':
         Boxplot.boxplot_fold(args)
@@ -51,3 +51,5 @@ if __name__ == "__main__":
 
 # python Challenge_Final_Code/Challenge_Main.py --main_folder="/home/nearlab/poliChallenge" --dataset_folder="/home/nearlab/poliChallenge/FetReg2021_Task1_Segmentation" --model_name="TransUNet_R50+ViT-B_16_hog" --pre_trained=False --cross_fold_validation=False --epochs=300 --loss_name="CrossEntropy" > /home/nearlab/poliChallenge/RESULTS_CHALLENGE/TransUNet_R50+ViT-B_16_hog.txt
 # python Challenge_Final_Code/Challenge_Main.py --main_folder="/home/nearlab/poliChallenge" --dataset_folder="/home/nearlab/poliChallenge/FetReg2021_Task1_Segmentation" --model_name="TransUNet_R50+ViT-B_16_hog" --pre_trained=True --cross_fold_validation=False --epochs=300 --loss_name="CrossEntropy"  > /home/nearlab/poliChallenge/RESULTS_CHALLENGE/TransUNet_R50+ViT-B_16_hog_pre_trained.txt
+
+# python Challenge_Final_Code\Challenge_Main.py --main_folder="H:\FetReg_Challenge" --dataset_folder="H:\FetReg_Challenge\FetReg2021_Task1_Segmentation" --model_name="FCN_ResNet_hog" --pre_trained=True --cross_fold_validation=True --epochs=300 --loss_name="CrossEntropy"  > H:\FetReg_Challenge\RESULTS_CHALLENGE\FCN_ResNet_hog_pre_trained.txt
