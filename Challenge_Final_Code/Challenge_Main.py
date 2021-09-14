@@ -1,6 +1,6 @@
-# import Training_pre_trained
-# import Training
-# import Testing
+import Training_pre_trained
+import Training
+import Testing
 import Evaluation_Segmentation_Final
 import Boxplot
 # from Challenge_Final_Code import Training
