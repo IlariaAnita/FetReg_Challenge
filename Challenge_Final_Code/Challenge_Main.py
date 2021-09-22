@@ -26,13 +26,13 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
 
-    # if args.pre_trained == 'True':
-    #     print('Pre Trained')
-    #     model_hog = Training_pre_trained.training(args)
-    # else:
-    #     print('No Pre Trained')
-    #     model_hog = Training.training(args)
-    # Testing.testing(args, model_hog)
+    if args.pre_trained == 'True':
+        print('Pre Trained')
+        model_hog = Training_pre_trained.training(args)
+    else:
+        print('No Pre Trained')
+        model_hog = Training.training(args)
+    Testing.testing(args, model_hog)
     Evaluation_Segmentation_Final.evaluation_segmentation(args)
     if args.cross_fold_validation == 'True':
         Boxplot.boxplot_fold(args)
