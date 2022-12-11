@@ -9,6 +9,8 @@ The method is described into https://github.com/IlariaAnita/FetReg_Challenge/blo
 The first large-scale multi-centre Twin-to-Twin Transfusion Syndrome (TTTS) dataset was used. Dataset is composed by 2060 images, pixel-annotated for
 vessels, tool, fetus and background classes, from 18 in vivo TTTS fetoscopy procedures. https://arxiv.org/abs/2106.05923v2
 
+![Dataset](https://github.com/IlariaAnita/FetReg_Challenge/blob/main/dataset.jpg)
+
 # Training setting 
 Each experiment was trained on 1708 images and evaluated on 352 images belonging to FetReg Dataset.
 After assessing the best model, we performed 6-fold cross-validation to verify the robustness of the segmentation algorithm. 
