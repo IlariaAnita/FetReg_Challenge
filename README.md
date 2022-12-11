@@ -5,6 +5,15 @@ The method is described into https://github.com/IlariaAnita/FetReg_Challenge/blo
 
 ![Framework](https://github.com/IlariaAnita/FetReg_Challenge/blob/main/framework.jpeg)
 
+Our contributions can be summarized as follows: 
+
+- Hand-crafted HOG feature injection into ANN target layer in order to improve the performance of multi-class segmentation task.
+- Comparisons between different architectures based on traditional CNN and Transformer-based models.
+
+In particular TransUNet code is based on: "Chen et al. 2021, TransUNet: Transformers Make Strong Encoders for Medical Image Segmentation"
+<https://arxiv.org/pdf/2102.04306.pdf>  
+https://github.com/Beckschen/TransUNet
+
 # Dataset
 The first large-scale multi-centre Twin-to-Twin Transfusion Syndrome (TTTS) dataset was used. Dataset is composed by 2060 images, pixel-annotated for
 vessels, tool, fetus and background classes, from 18 in vivo TTTS fetoscopy procedures. https://arxiv.org/abs/2106.05923v2
