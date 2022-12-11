@@ -1,6 +1,6 @@
 # HOG Injection into ANN for Fetoscopic Multi-Class Segmentation
 This is an official implementation of the method developed by the team BioPolmini from Politecnico di Milano (Italy), composed by Chiara Lena, Jessica Biagioli, 
-Gaia Romana and Ilaria Anita Cintorrino, to partecipate at the e Fetoscopic Placental Vessel Segmentation and Registration (FetReg2021) Challenge at MICCAI2021. 
+Gaia Romana De Paolis and Ilaria Anita Cintorrino, to partecipate at the e Fetoscopic Placental Vessel Segmentation and Registration (FetReg2021) Challenge at MICCAI2021. 
 The method is described into https://github.com/IlariaAnita/FetReg_Challenge/blob/main/Write_Up_Challenge%20(1).pdf
 
 ![Framework](https://github.com/IlariaAnita/FetReg_Challenge/blob/main/framework.jpeg)
@@ -10,7 +10,7 @@ Our contributions can be summarized as follows:
 - Hand-crafted HOG feature injection into ANN target layer in order to improve the performance of multi-class segmentation task.
 - Comparisons between different architectures based on traditional CNN and Transformer-based models.
 
-In particular TransUNet code is based on: "Chen et al. 2021, TransUNet: Transformers Make Strong Encoders for Medical Image Segmentation"
+In particular TransUNet code is based on: "Chen et al. 2021, TransUNet: Transformers Make Strong Encoders for Medical Image Segmentation"  
 <https://arxiv.org/pdf/2102.04306.pdf>  
 https://github.com/Beckschen/TransUNet
 
@@ -36,3 +36,13 @@ For the experiments, training was performed for 300 epochs. The final weights su
 the 2060 annotated frames, following the same described setup, for 700 epochs.
 
 The networks were trained with two 32 GB of RAM and NVIDIA Tesla V100 GPU.
+
+# Meta
+Chiara Lena chiara.lena@polimi.it  
+Jessica Biagioli jessica.biagioli@mail.polimi.it  
+Gaia Romana De Paolis gaiaromana.depaolis@mail.polimi.it  
+Ilaria Anita Cintorrino ilariaanita.cintorrino@mail.polimi.it
+
+All code is provided for research purposes only and without any warranty. Any commercial use requires our consent. If you use this code or ideas from the paper for your research, please cite:
+https://doi.org/10.48550/arXiv.2206.12512
+
